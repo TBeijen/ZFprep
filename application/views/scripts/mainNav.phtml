@@ -1,0 +1,20 @@
+<ul class="mainNav">
+<?php
+$urls = array();
+$urls[] = array(
+    'label' => 'Lucene',
+    'url' => $this->url(array(
+        'controller' => 'lucene',
+        'action' => 'index'
+    ))
+);
+
+// capture nav to mainNav placeholder, for footer reuse
+$this->placeholder('mainNav')->captureStart();
+echo $this->partialLoop('partialLoopNavItem.phtml', $urls);
+$this->placeholder('mainNav')->captureEnd();
+
+echo $this->placeholder('mainNav');
+?>
+</ul>
+<hr>

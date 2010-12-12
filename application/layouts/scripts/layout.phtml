@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><?=$this->title?></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+      <?=$this->action('userinfo', 'login');?>
+      <?=$this->partial('mainNav.phtml');?>
+      <div id="mainContent">
+      <?php // echo $this->layout()->content; ?>
+      <?php echo $this->placeholder('Zend_Layout')->content; ?>
+      </div>
+      <hr>
+      <ul class=""footerNav">
+      <?=$this->placeholder('mainNav'); ?>
+      </ul>
+  </body>
+</html>
