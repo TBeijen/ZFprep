@@ -3,6 +3,9 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
+// define environment
+define('APP_ENVIRONMENT', 'development');
+
 // set include path
 define('APP_ROOT', dirname(dirname(__FILE__)));
 set_include_path(implode(PATH_SEPARATOR, array(
