@@ -1,0 +1,10 @@
+<h1>Building Lucene index</h1>
+<p>Number of articles indexed: <strong><?=$this->numDocs;?></strong></p>
+<h3>Documents deleted:</h3>
+<ul>
+<?php
+foreach ($this->docsDeleted as $docId) {
+    echo '<li>' . $docId . '</li>';
+}
+?>
+</ul>

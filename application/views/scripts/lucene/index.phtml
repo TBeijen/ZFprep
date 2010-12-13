@@ -1,1 +1,15 @@
 <h1><?=$this->title;?></h1>
+<?=$this->form;?>
+<ul>
+<?php
+foreach ($this->results as $result) {
+    $line = sprintf('<li><a href="%s">%s</a> (id=%s, score=%s)',
+        $result->url,
+        $this->escape($result->title),
+        $result->article_id,
+        $result->score
+    );
+    echo $line;
+}
+?>
+</ul>

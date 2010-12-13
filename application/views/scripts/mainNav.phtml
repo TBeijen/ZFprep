@@ -2,10 +2,17 @@
 <?php
 $urls = array();
 $urls[] = array(
-    'label' => 'Lucene',
+    'label' => 'Lucene - search',
     'url' => $this->url(array(
         'controller' => 'lucene',
         'action' => 'index'
+    ))
+);
+$urls[] = array(
+    'label' => 'Lucene - build',
+    'url' => $this->url(array(
+        'controller' => 'lucene',
+        'action' => 'build'
     ))
 );
 
