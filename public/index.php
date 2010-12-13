@@ -1,6 +1,6 @@
 <?php
 // local, display errors
-error_reporting(E_ALL);
+error_reporting(E_ALL ^ E_DEPRECATED);
 ini_set('display_errors', '1');
 
 // define environment
@@ -10,7 +10,7 @@ define('APP_ENVIRONMENT', 'development');
 define('APP_ROOT', dirname(dirname(__FILE__)));
 set_include_path(implode(PATH_SEPARATOR, array(
     '/www/shared/ZF/1.5.3/library/',
-    APP_ROOT . 'application/models',
+    APP_ROOT . '/application/models',
     get_include_path(),
 )));
 
